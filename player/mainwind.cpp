@@ -1,4 +1,4 @@
-#include "mainwind.h"
+﻿#include "mainwind.h"
 #include "ui_mainwind.h"
 
 MainWind::MainWind(QWidget *parent)
@@ -6,6 +6,9 @@ MainWind::MainWind(QWidget *parent)
     , ui(new Ui::MainWind)
 {
     ui->setupUi(this);
+    //InitUI();
+    //InitSignalsAndSlots();
+    //InitPlayer();
 }
 
 MainWind::~MainWind()

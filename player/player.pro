@@ -18,6 +18,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     ctrlbar.cpp \
     displaywind.cpp \
+    ffmsg_queue.cpp \
     main.cpp \
     mainwind.cpp \
     playlistwind.cpp \
@@ -26,6 +27,8 @@ SOURCES += \
 HEADERS += \
     ctrlbar.h \
     displaywind.h \
+    ffmsg.h \
+    ffmsg_queue.h \
     mainwind.h \
     playlistwind.h \
     titlebar.h
@@ -44,3 +47,19 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     icon.qrc
+win32{
+INCLUDEPATH += $$PWD/ffmpeg-4.2.1-win32-dev/include
+INCLUDEPATH += $$PWD/SDL2/include
+
+LIBS += $$PWD/ffmpeg-4.2.1-win32-dev/lib/avformat.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/avcodec.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/avdevice.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/avfilter.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/avutil.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/postproc.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/swresample.lib \
+        $$PWD/ffmpeg-4.2.1-win32-dev/lib/swscale.lib \
+        $$PWD/SDL2/lib/x86/SDL2.lib \
+        "D:\Windows Kits\10\Lib\10.0.22621.0\um\x86\Ole32.Lib"
+}
+
