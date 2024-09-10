@@ -14,7 +14,8 @@ class CtrlBar : public QWidget
 public:
     explicit CtrlBar(QWidget *parent = nullptr);
     ~CtrlBar();
-
+signals:
+    void SigPlayOrPause();
 private slots:
     void on_playOrPauseBtn_clicked();
 

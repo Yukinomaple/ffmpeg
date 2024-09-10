@@ -18,7 +18,9 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
     ctrlbar.cpp \
     displaywind.cpp \
+    ff_ffplay.cpp \
     ffmsg_queue.cpp \
+    ijkmediaplayer.cpp \
     main.cpp \
     mainwind.cpp \
     playlistwind.cpp \
@@ -27,8 +29,10 @@ SOURCES += \
 HEADERS += \
     ctrlbar.h \
     displaywind.h \
+    ff_ffplay.h \
     ffmsg.h \
     ffmsg_queue.h \
+    ijkmediaplayer.h \
     mainwind.h \
     playlistwind.h \
     titlebar.h
